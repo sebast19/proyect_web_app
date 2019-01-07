@@ -9,46 +9,58 @@
         <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="{{ asset('css/scrolling-nav.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/modern-business.css') }}" rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Proyect Without Name</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
-            </ul>
+         <!-- Navigation -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('homepage') }}">Nova Corp</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ path('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Blog Example menu(Contact Content)
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                        <a class="dropdown-item" href="{{ path('contact', {'place': 'col'}) }}">Contact 1</a>
+                        <a class="dropdown-item" href="{{ path('contact', {'place': 'arg'}) }}">Blog Home 2</a>
+                        <a class="dropdown-item" href="{{ path('contact', {'place': 'usa'}) }}">Blog Post</a>
+                    </div>
+                    </li>
+                </ul>
+                </div>
             </div>
-        </div>
         </nav>
         <!-- END Navigation -->
 
         {% block body %}{% endblock %}
 
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; NovaCorp 2018</p>
+        </div>
+        <!-- /.container -->
+        </footer>
+
         <!-- Bootstrap core JavaScript -->
         <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-        <!-- Plugin JavaScript -->
-        <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-
-        <!-- Custom JavaScript for this theme -->
-        <script src="{{ asset('js/scrolling-nav.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    About Us
+{% endblock %}
+
+{% block body %}
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">Nova Corp
+        <small>About us</small>
+      </h1>
+
+    <!-- Image Header -->
+    <img class="img-fluid rounded mb-4" src="{{ asset('img/banner-about.jpeg') }}" alt="">
+    
+    <!-- Team Members-->
+    <h2 class="text-center">Our Team</h2>
+    <hr>
+
+    <!-- Marketing Icons Section -->
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 text-center">
+            <img class="card-img-top" src="{{ asset('img/our-team.jpeg') }}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Andrey Sanchez</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Developer</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#">andrey.sanchez@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 text-center">
+            <img class="card-img-top" src="{{ asset('img/our-team.jpeg') }}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Sebastian Rodriguez</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Designer</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#">sebas.rodriguez@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 text-center">
+            <img class="card-img-top" src="{{ asset('img/our-team.jpeg') }}" alt="">
+            <div class="card-body">
+              <h4 class="card-title text-center">Juan Diego Mahecha</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Developer</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#">juan.mahecha@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>  
+{% endblock %}
